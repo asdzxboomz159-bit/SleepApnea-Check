@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleepApnea Check - ระบบตรวจจับภาวะหยุดหายใจขณะหลับ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 p-2 rounded-lg text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M6 8h12"/><path d="M6 12h12"/><path d="M6 16h8"/></svg>
+                </div>
+                <span class="font-semibold text-xl tracking-tight">SleepApnea Check</span>
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">เกี่ยวกับโครงงาน</a>
+                <a href="#demo" class="hover:text-blue-600 transition">ทดลองระบบ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">"นอนกรน" อาจเป็นสัญญาณอันตราย</h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                นวัตกรรมการตรวจจับภาวะหยุดหายใจขณะหลับ (Sleep Apnea) ผ่านการวิเคราะห์สัญญาณเสียงด้วยระบบ AI และ Signal Processing เบื้องต้นบนสมาร์ทโฟน
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#demo" class="bg-white text-blue-700 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition shadow-lg">เริ่มต้นตรวจวัด</a>
+                <a href="#about" class="bg-blue-700/50 border border-blue-400 px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition">ข้อมูลเชิงเทคนิค</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Concept Section -->
+    <section id="about" class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+                <span class="text-blue-600 font-semibold text-sm tracking-widest uppercase">Concept & Technology</span>
+                <h2 class="text-3xl font-bold mt-2 mb-6 text-slate-800">แนวคิดและเทคโนโลยี</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold">01</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Signal Processing</h4>
+                            <p class="text-slate-600">ใช้ไมโครโฟนบันทึกเสียงและประมวลผลสัญญาณ เพื่อแยกแยะ "เสียงกรนปกติ" ออกจาก "เสียงสำลักหรือช่วงเงียบที่ผิดปกติ" (Apnea Event)</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold">02</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">AHI Index Evaluation</h4>
+                            <p class="text-slate-600">วิเคราะห์หาค่าดัชนีการหยุดหายใจและหายใจแผ่ว (AHI) เบื้องต้น เพื่อประเมินระดับความรุนแรง</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="shrink-0 w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold">03</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Health Recommendation</h4>
+                            <p class="text-slate-600">หากมีความเสี่ยงสูง ระบบจะแนะนำให้ผู้ใช้งานเตรียมตัวทำ Sleep Test อย่างละเอียดกับแพทย์ผู้เชี่ยวชาญ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo/Simulator -->
+    <section id="demo" class="py-16 px-4 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold">ระบบตรวจวัดจำลอง</h2>
+                <p class="text-slate-400 mt-2">หน้าต่างจำลองการบันทึกเสียงและวิเคราะห์ผล</p>
+            </div>
+            
+            <div class="bg-slate-800 rounded-3xl p-6 border border-slate-700">
+                <div id="status-panel" class="mb-8 text-center">
+                    <div id="pulse-indicator" class="hidden w-24 h-24 bg-blue-500/20 border-2 border-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full animate-ping"></div>
+                    </div>
+                    <p id="status-text" class="text-lg font-medium">กดปุ่มด้านล่างเพื่อเริ่มบันทึกเสียง</p>
+                </div>
+
+                <!-- Waveform Display (Mockup) -->
+                <div class="h-32 w-full bg-slate-900/50 rounded-xl border border-slate-700 overflow-hidden flex items-center justify-center gap-1 mb-8 px-4">
+                    <div class="flex items-center gap-1 h-20 w-full" id="wave-container">
+                        <!-- Bars will be animated via JS -->
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <button id="start-btn" onclick="toggleRecording()" class="bg-blue-600 hover:bg-blue-500 px-10 py-4 rounded-full font-bold transition flex items-center gap-3">
+                        <span id="btn-icon">🎙️</span>
+                        <span id="btn-text">เริ่มบันทึกเสียง</span>
+                    </button>
+                </div>
+
+                <!-- Result Card (Hidden Initially) -->
+                <div id="result-card" class="hidden mt-8 p-6 bg-white text-slate-900 rounded-2xl border-l-8 border-yellow-500">
+                    <h3 class="text-xl font-bold mb-2">สรุปผลการวิเคราะห์เบื้องต้น</h3>
+                    <div class="grid grid-cols-2 gap-4 my-4">
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <span class="block text-xs text-slate-500 uppercase">ค่า AHI ประมาณการ</span>
+                            <span class="text-2xl font-bold text-yellow-600">12.5 ครั้ง/ชม.</span>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-lg">
+                            <span class="block text-xs text-slate-500 uppercase">ระดับความรุนแรง</span>
+                            <span class="text-2xl font-bold text-yellow-600">ปานกลาง</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 mb-4 italic text-center">"คุณมีแนวโน้มภาวะหยุดหายใจขณะหลับ ควรนัดหมายเพื่อตรวจ Sleep Test ที่โรงพยาบาลเพิ่มเติม"</p>
+                    <button onclick="resetDemo()" class="w-full py-2 text-blue-600 font-semibold border border-blue-100 rounded-lg hover:bg-blue-50">เริ่มใหม่อีกครั้ง</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-slate-200 text-center text-slate-500 text-sm">
+        <p>© 2024 SleepApnea Check - โครงงานวิทยาศาสตร์ชีวการแพทย์และสุขภาพ</p>
+    </footer>
+
+    <script>
+        let isRecording = false;
+        let animationInterval;
+
+        function toggleRecording() {
+            const btnText = document.getElementById('btn-text');
+            const btnIcon = document.getElementById('btn-icon');
+            const statusText = document.getElementById('status-text');
+            const pulse = document.getElementById('pulse-indicator');
+            const startBtn = document.getElementById('start-btn');
+            const waveContainer = document.getElementById('wave-container');
+
+            if (!isRecording) {
+                // Start Recording
+                isRecording = true;
+                btnText.innerText = 'กำลังบันทึก... (หยุด)';
+                btnIcon.innerText = '⏹️';
+                startBtn.classList.replace('bg-blue-600', 'bg-red-600');
+                statusText.innerText = 'ระบบกำลังฟังเสียงลมหายใจและเสียงกรนของคุณ...';
+                pulse.classList.remove('hidden');
+                
+                // Animate bars
+                createWaveform();
+                animationInterval = setInterval(updateWaveform, 150);
+                
+                // Simulation Auto-Stop after 5 seconds
+                setTimeout(() => {
+                    if(isRecording) toggleRecording();
+                    showResult();
+                }, 5000);
+
+            } else {
+                // Stop Recording
+                isRecording = false;
+                btnText.innerText = 'วิเคราะห์ผลสำเร็จ';
+                btnIcon.innerText = '✅';
+                startBtn.classList.replace('bg-red-600', 'bg-green-600');
+                statusText.innerText = 'การบันทึกสิ้นสุดลงแล้ว';
+                pulse.classList.add('hidden');
+                clearInterval(animationInterval);
+                startBtn.disabled = true;
+            }
+        }
+
+        function createWaveform() {
+            const container = document.getElementById('wave-container');
+            container.innerHTML = '';
+            for (let i = 0; i < 40; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'bg-blue-400 w-full rounded-full transition-all duration-150';
+                bar.style.height = '10%';
+                container.appendChild(bar);
+            }
+        }
+
+        function updateWaveform() {
+            const bars = document.querySelectorAll('#wave-container div');
+            bars.forEach(bar => {
+                const height = Math.floor(Math.random() * 90) + 10;
+                bar.style.height = height + '%';
+            });
+        }
+
+        function showResult() {
+            document.getElementById('result-card').classList.remove('hidden');
+            document.getElementById('result-card').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function resetDemo() {
+            isRecording = false;
+            document.getElementById('result-card').classList.add('hidden');
+            const startBtn = document.getElementById('start-btn');
+            startBtn.disabled = false;
+            startBtn.classList.remove('bg-green-600', 'bg-red-600');
+            startBtn.classList.add('bg-blue-600');
+            document.getElementById('btn-text').innerText = 'เริ่มบันทึกเสียง';
+            document.getElementById('btn-icon').innerText = '🎙️';
+            document.getElementById('status-text').innerText = 'กดปุ่มด้านล่างเพื่อเริ่มบันทึกเสียง';
+            document.getElementById('wave-container').innerHTML = '';
+        }
+    </script>
+</body>
+</html>
